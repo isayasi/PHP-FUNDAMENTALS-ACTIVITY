@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
+    <title>Order Form</title>
+    <style>
+        body {
+            font-size: 18px; /* Body font */
+        }
+
+        h1 {
+            font-size: 24px; /* Heading font */
+        }
+
+        table {
+            font-size: 18px; /* Table font */
+            margin-bottom: 10px; /* Spacing */
+        }
+
+        th, td {
+            padding-right: 15px; /* Cell padding */
+        }
+
+        input, select, label {
+            font-size: 18px; /* Input font */
+        }
+
+        input[type="submit"] {
+            font-size: 18px; /* Button font */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Menu</h1> <!-- Title -->
+
+    <table border="1"> <!-- Table -->
+        <tr>
+            <th>Order</th> <!-- Header -->
+            <th>Amount</th> <!-- Header -->
+        </tr>
+        <tr>
+            <td>Burger</td> <!-- Item -->
+            <td>50</td> <!-- Price -->
+        </tr>
+        <tr>
+            <td>Fries</td> <!-- Item -->
+            <td>75</td> <!-- Price -->
+        </tr>
+        <tr>
+            <td>Steak</td> <!-- Item -->
+            <td>150</td> <!-- Price -->
+        </tr>
+    </table>
+
+    <form method="post" action="order.php"> <!-- Form -->
+        <label for="order">Select an order:</label> <!-- Order label -->
+        <select name="order" id="order"> <!-- Dropdown -->
+            <option value="Burger">Burger</option> <!-- Option -->
+            <option value="Fries">Fries</option> <!-- Option -->
+            <option value="Steak">Steak</option> <!-- Option -->
+        </select>
+
+        <br><br>
+
+        <label for="quantity">Quantity:</label> <!-- Quantity label -->
+        <input type="number" name="quantity" id="quantity" value="1" min="1" required> <!-- Quantity input -->
+
+        <br><br>
+
+        <label for="cash">Cash:</label> <!-- Cash label -->
+        <input type="number" name="cash" id="cash" required> <!-- Cash input -->
+
+        <br><br>
+
+        <input type="submit" value="Submit"> <!-- Submit button -->
+    </form>
+
+</body>
+</html>
